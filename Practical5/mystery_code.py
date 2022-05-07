@@ -1,5 +1,5 @@
 # What does this piece of code do?
-# Answer:When progress hits 10 from zero, print a random number from 1 to 100
+# Answer:Produce 10 random numbers from 1 to 100 and print the tenth number.
 
 # Import libraries
 # randint allows drawing a random number,
