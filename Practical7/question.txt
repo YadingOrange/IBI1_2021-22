@@ -1,0 +1,4 @@
+What is the number of new cases and new deaths in France over time? (Plot the data)
+49 to 62
+There is a steep increase in the new cases at the end of February in 2020.
+The number of new deaths increases slowly in March in 2020.
