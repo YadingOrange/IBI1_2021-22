@@ -1,11 +1,12 @@
-from argparse import Namespace
 import re
-genes = input()
-file = open(genes, "r")
-out = open("count_genes.fa", "w")
+
+
+file = open(input("file name:"), "r")
+out = open("count_cut_genes.fa", "w")
 
 Names = []
 cuts = []
+Lengths = []
 Sequences = []
 
 i = 0
@@ -23,12 +24,15 @@ for line in file:
 
 for i in range(len(Sequences)):
     cuts.append(len(re.findall("GAATTC", Sequences[i]))+1)
+    Lengths.append(len(Sequences[i]))
+
 
 for i in range(len(Names)):
     if len(re.findall("GAATTC", Sequences[i])) != 0:
         out.write(Names[i])
         out.write("           ")
         out.write(str(cuts[i]))
+        out.write(str(Lengths[i]))
         out.write("\n")
         out.write(Sequences[i])
         out.write("\n")
