@@ -1,0 +1,7 @@
+The alignment score of human and mouse is 1497.
+The alignment score of human/mouse and random is far below 0.
+The percentage of identical amino acids for human and mouse is near to 100%.
+The percentage of identical amino acids for human/mouse and random is near to 0%.
+Two species that are closely related over the course of evolution are more genetically similar. So these data can show the gene similarity between two species.
+
+
