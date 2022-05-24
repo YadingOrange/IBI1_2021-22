@@ -1,3 +1,4 @@
+# Select the part of sequences.
 human = open("DLX5_human.fa")
 for line in human:
     if not line.startswith(">"):
@@ -13,10 +14,11 @@ for line in random:
     if not line.startswith(">"):
         seq_random = line
 
-
+# Set up a list for amino acids.
 amino_acid = ['A', 'R', 'N', 'D', 'C', 'Q', 'E', 'G', 'H', 'I',
               'L', 'K', 'M', 'F', 'P', 'S', 'T', 'W', 'Y', 'V', 'B', 'Z', 'X']
 
+# Import the data of BLOSUM.
 BLOSUM = [
     [4, -1, -2, -2,  0, -1, -1,  0, -2, -1, -1, -
         1, -1, -2, -1,  1,  0, -3, -2,  0, -2, -1,  0],
@@ -66,7 +68,7 @@ BLOSUM = [
         1, -1, -1, -2,  0,  0, -2, -1, -1, -1, -1, -1]
 ]
 
-
+# Count the sites of two sequences that are different.
 human_mouse_ed = 0
 for i in range(len(seq_human)):
     if seq_human[i] != seq_mouse[i]:
@@ -81,6 +83,8 @@ human_random_ed = 0
 for i in range(len(seq_human)):
     if seq_human[i] != seq_random[i]:
         human_random_ed += 1
+
+# Define a function to compute the BLOSUM score.
 
 
 def BLOSUM_value(seq1, seq2):
@@ -98,7 +102,7 @@ def BLOSUM_value(seq1, seq2):
     return value
 
 
-# the "\n" should not be included
+# The "\n" should not be included.
 human_mouse_percentage = 1-human_mouse_ed/(len(seq_human)-1)
 mouse_random_percentage = 1-mouse_random_ed/(len(seq_mouse)-1)
 human_random_percentage = 1-human_random_ed/(len(seq_random)-1)
