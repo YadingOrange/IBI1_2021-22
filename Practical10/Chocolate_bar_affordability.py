@@ -1,3 +1,4 @@
+# Define a function that computes the number of chocolate according to the totol money and unit price.
 def number(total_money, price):
     number = int(total_money/price)
     return number

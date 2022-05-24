@@ -1,5 +1,6 @@
 import re
 DNA = input()
+# Count the total of uppercase and lowercase letters.
 A = len(re.findall("A|a", DNA))
 T = len(re.findall("T|t", DNA))
 C = len(re.findall("C|c", DNA))
